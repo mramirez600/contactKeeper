@@ -19,19 +19,22 @@ const ContactState = props => {
         id: 1,
         name: 'Jill Johnson',
         email: 'jill@gmail.com',
-        phone: '111-111-1111'
+        phone: '111-111-1111',
+        type: 'professional'
       },
       {
         id: 2,
         name: 'Bob Johnson',
         email: 'bob@gmail.com',
-        phone: '222-222-2222'
+        phone: '222-222-2222',
+        type: 'professional'
       },
       {
         id: 1,
         name: 'John Johnson',
         email: 'john@gmail.com',
-        phone: '333-333-3333'
+        phone: '333-333-3333',
+        type: 'personal'
       }
     ]
   };
@@ -53,11 +56,11 @@ const ContactState = props => {
   // clear filter
 
   return (
-    <ContactContext.Provider>
-      value =
-      {{
+    <ContactContext.Provider
+      value={{
         contacts: state.contacts
       }}
+    >
       {props.children}
     </ContactContext.Provider>
   );
